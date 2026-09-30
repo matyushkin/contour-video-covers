@@ -1,0 +1,25 @@
+[project]
+name = "contour-video-covers"
+version = "0.1.0"
+description = "Contour-field covers for music videos: one frame, one coloured hero, one fixed title grid"
+readme = "README.md"
+license = "MIT"
+authors = [{ name = "Leo Matyushkin" }]
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.26",
+    "opencv-python-headless>=4.9",
+    "pillow>=10.1",
+]
+
+[project.scripts]
+contour-cover = "contour_video_covers.cli:main"
+
+[dependency-groups]
+dev = [
+    "pytest>=8",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
